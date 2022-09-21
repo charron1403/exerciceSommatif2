@@ -24,7 +24,7 @@ namespace ExerciceSomatif2.Controles
             index = 0;
         }
 
-        public Forme ChangerForme()
+        private Forme ChangerForme()
         {
             if (index >= formes.Count)
             {
@@ -39,8 +39,7 @@ namespace ExerciceSomatif2.Controles
 
         public void EventAfficherForme()
         {
-            Forme nouvelleForme = formes[index - 1];
-            FormeCourantChanged?.Invoke(this, nouvelleForme);
+            FormeCourantChanged?.Invoke(this, ChangerForme());
         }
     }
 }

@@ -9,17 +9,16 @@ namespace ExerciceSomatif2
         {
             InitializeComponent();
             controleur = new Controleur();
-            controleur.FormeCourantChanged += Controleur_FormeCourantChanged; ;
+            controleur.FormeCourantChanged += Controleur_FormeCourantChanged;
         }
 
-        private void Controleur_FormeCourantChanged(object? sender, Models.Forme e)
+        private void Controleur_FormeCourantChanged(object? sender, Models.Forme forme)
         {
-            affichageForme1.MettreAffichageAJour();
+            affichageForme1.MettreAffichageAJour(forme);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            affichageForme1.FormeCourante = controleur.ChangerForme();
             controleur.EventAfficherForme();
         }
     }

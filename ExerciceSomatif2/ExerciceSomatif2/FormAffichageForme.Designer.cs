@@ -34,7 +34,6 @@
             // 
             // affichageForme1
             // 
-            this.affichageForme1.FormeCourante = null;
             this.affichageForme1.Location = new System.Drawing.Point(12, 12);
             this.affichageForme1.Name = "affichageForme1";
             this.affichageForme1.Size = new System.Drawing.Size(268, 262);

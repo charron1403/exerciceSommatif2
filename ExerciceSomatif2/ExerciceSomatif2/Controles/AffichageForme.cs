@@ -21,14 +21,14 @@ namespace ExerciceSomatif2.Controles
             InitializeComponent();
         }
 
-        public Forme FormeCourante { get => formeCourante; set => formeCourante = value; }
-
-        public void MettreAffichageAJour()
+        public void MettreAffichageAJour(Forme forme)
         {
+            formeCourante = forme;
+
             if (formeCourante != null)
             {
-                picboxForme.Image = FormeCourante.Dessiner();
-                txtTypeForme.Text = FormeCourante.ObtenirType();
+                picboxForme.Image = formeCourante.Dessiner();
+                txtTypeForme.Text = formeCourante.ObtenirType();
             }
         }
     }
